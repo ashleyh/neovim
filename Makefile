@@ -27,7 +27,7 @@ deps: .deps/usr/lib/libuv.a .deps/usr/lib/libluajit-5.1.a .deps/usr/bin/busted
 	sh -e scripts/compile-lua.sh
 
 .deps/usr/bin/busted:
-	sh -e scripts/setup-test-tools.sh
+	sh -ex scripts/setup-test-tools.sh
 
 cmake: clean deps
 	mkdir build

@@ -14,9 +14,9 @@ cd "$luarocks_dir"
 	--with-lua-include="$prefix/include/luajit-2.0" \
 	--lua-suffix="jit"
 
-make bootstrap
+env -i make bootstrap
 
 # install tools for testing
-luarocks install moonrocks --server=http://rocks.moonscript.org
+luarocks install moonrocks --server=http://rocks.moonscript.org --verbose
 moonrocks install moonscript
 moonrocks install busted
